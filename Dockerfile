@@ -8,7 +8,7 @@ ENV PATH $PATH:$M2_HOME:$M2
 WORKDIR /app
 COPY . .
 
-RUN apk --update upgrade && \
+#RUN apk --update upgrade && \
     # install Maven and JDK
     #apk add curl openjdk8="$JAVA_ALPINE_VERSION" && \
     #curl http://mirrors.sonic.net/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz | tar -zx && \
