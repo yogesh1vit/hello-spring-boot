@@ -22,4 +22,4 @@ RUN apk --update upgrade && \
     #rm -rf target && \
     #apk del curl openjdk8
 
-CMD java -jar app.jar --server.port=$PORT
+#CMD java -jar app.jar --server.port=$PORT
