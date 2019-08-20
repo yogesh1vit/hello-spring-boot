@@ -1,0 +1,23 @@
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dfp-deployment
+  labels:
+    app: dfp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dfp
+  template:
+    metadata:
+      labels:
+        app: dfp
+    spec:
+      containers:
+      - name: akscidev
+        image: aksdev:6
+        ports:
+        - containerPort: 80
