@@ -1,5 +1,3 @@
-
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -7,7 +5,7 @@ metadata:
   labels:
     app: dfp
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: dfp
@@ -18,6 +16,8 @@ spec:
     spec:
       containers:
       - name: akscidev
-        image: aksdev:6
+        image: akscidev.azurecr.io/aksdev:7
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      - name: acr-auth
