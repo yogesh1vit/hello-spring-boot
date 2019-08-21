@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-ENV PORT=8080
+ENV PORT=80
 ENV M2_HOME=/usr/lib/mvn
 ENV M2=$M2_HOME/bin
 ENV PATH $PATH:$M2_HOME:$M2
